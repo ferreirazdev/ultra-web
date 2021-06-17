@@ -22,6 +22,7 @@ const Navbar = () => {
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click)
+  const closeMobileMenu= () => setClick(!click)
 
   const showButton = () => {
     if(window.innerWidth <= 960) {
@@ -43,7 +44,7 @@ const Navbar = () => {
         <Nav>
           <NavbarContainer>
             
-            <NavLogo to="/">
+            <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
               ULTRA
             </NavLogo>
